@@ -5,6 +5,7 @@ import NotFound from "../pages/not-found-page";
 import HomePage from "../pages/home-page";
 import AboutPage from "../pages/about-page";
 import ContactPage from "../pages/contact-page";
+import WcstWindow from "../pages/wcst-test-page";
 
 export const router = createBrowserRouter([
   {
@@ -27,5 +28,9 @@ export const router = createBrowserRouter([
         element: <NotFound />,
       },
     ],
+  },
+  {
+    path: "/wcst-test-window",
+    element: <WcstWindow/>
   },
 ]);

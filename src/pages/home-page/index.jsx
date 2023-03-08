@@ -1,10 +1,10 @@
 import React from "react";
-import Wcst from "../wcst-page";
+import WcstPage from "../wcst-page";
 
 function HomePage() {
   return (
     <div>
-      <Wcst />
+      <WcstPage />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React from "react";
+import * as S from "./styles"
 
-function Wcst() {
+function WcstPage() {
   return (
     <div>
       <h1>Wisconsin Card Sorting Test (WCST)</h1>
@@ -33,17 +34,11 @@ function Wcst() {
         cupiditate dicta suscipit maxime vel asperiores, enim facilis!
       </p>
       <hr />
-      <div
-        style={{
-          margin: "4rem",
-          backgroundColor: "black",
-          height: "20rem",
-          
-          textAlign: "center",
-        }}
+      <S.RunBox
+
       >
-        <a href="" style={{color: "white",}}>Run</a>
-      </div>
+        <a href="/wcst-test-window" style={{color: "white",}}>Run</a>
+      </S.RunBox>
       <hr />
       <h2>Resources</h2>
       <p>
@@ -63,4 +58,4 @@ function Wcst() {
   );
 }
 
-export default Wcst;
+export default WcstPage;
