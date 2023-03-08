@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Cross = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   background-color: white;
   clip-path: polygon(
     0 33%,
@@ -21,15 +21,15 @@ export const Cross = styled.div`
 `;
 
 export const Circle = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   background-color: white;
   clip-path: circle(50% at 50% 50%);
 `;
 
 export const Star = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   background-color: white;
   clip-path: polygon(
     50% 0%,
@@ -46,8 +46,8 @@ export const Star = styled.div`
 `;
 
 export const Triangle = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   background-color: white;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 `;

@@ -1,64 +1,53 @@
 import * as S from "./styles";
-import {Figure} from "../figure";
+import { Figure } from "../figure";
 
+export const FigurePosition = ({ count, color, figure,  }) => {
+  const center = count === 1;
+  const bottomLeft = count === 4;
+  const bottomCenter = count === 3;
+  const topRight = count === 3 || count === 4;
+  const bottomRight = count === 2 || count === 4;
+  const topLeft = count === 2 || count === 3 || count === 4;
 
-
-
-
-export const OneFigureCard = ({figure}) => {
   return (
     <>
-      <S.CenterPosition>
-        <Figure figure={figure} />
-      </S.CenterPosition>
+      {center && Center({ figure, color })}
+      {topLeft && TopLeft({ figure, color })}
+      {topRight && TopRight({ figure, color })}
+      {bottomLeft && BottomLeft({ figure, color })}
+      {bottomRight && BottomRight({ figure, color })}
+      {bottomCenter && BottomCenter({ figure, color })}
     </>
   );
 };
 
-export const TwoFigureCard = ({figure}) => {
-  return (
-    <>
-      <S.TopLeftPosition>
-        <div
-          style={{
-            width: "100px",
-            height: "100px",
-            background: "white",
-            borderRadius: "50%",
-          }}
-        ></div>
-      </S.TopLeftPosition>
-      <S.BottomRightPosition>
-        <div
-          style={{
-            width: "100px",
-            height: "100px",
-            background: "white",
-            borderRadius: "50%",
-          }}
-        ></div>
-      </S.BottomRightPosition>
-    </>
-  );
-};
-
-export const ThreeFigureCard = ({figure}) => {
-  return (
-    <>
-      <S.TopLeftPosition>1</S.TopLeftPosition>
-      <S.TopRightPosition>1</S.TopRightPosition>
-      <S.BottomCenterPosition>1</S.BottomCenterPosition>
-    </>
-  );
-};
-
-export const FourFigureCard = ({figure}) => {
-  return (
-    <>
-      <S.TopLeftPosition>1</S.TopLeftPosition>
-      <S.TopRightPosition>1</S.TopRightPosition>
-      <S.BottomLeftPosition>1</S.BottomLeftPosition>
-      <S.BottomRightPosition>1</S.BottomRightPosition>
-    </>
-  );
-};
+const TopLeft = ({ figure, color }) => (
+  <S.TopLeft>
+    <Figure figure={figure} color={color}/>
+  </S.TopLeft>
+);
+const TopRight = ({ figure, color }) => (
+  <S.TopRight>
+    <Figure figure={figure} color={color}/>
+  </S.TopRight>
+);
+const Center = ({ figure, color }) => (
+  <S.Center>
+    <Figure figure={figure} color={color}/>
+  </S.Center>
+);
+const BottomLeft = ({ figure, color }) => (
+  <S.BottomLeft>
+    <Figure figure={figure} color={color}/>
+  </S.BottomLeft>
+);
+const BottomCenter = ({ figure, color }) => (
+  <S.BottomCenter>
+    <Figure figure={figure} color={color}/>
+  </S.BottomCenter>
+);
+const BottomRight = ({ figure, color }) => (
+  <S.BottomRight>
+    <Figure figure={figure} color={color}/>
+  </S.BottomRight>
+);

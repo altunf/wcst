@@ -1,37 +1,37 @@
 import styled from "styled-components";
 
-export const TopLeftPosition = styled.div`
+export const TopLeft = styled.div`
 position: absolute; 
 top: 13px; 
 left: 13px;
 `;
 
-export const TopRightPosition = styled.div`
+export const TopRight = styled.div`
 position: absolute; 
 top: 13px; 
 right: 13px;
 `;
 
-export const CenterPosition = styled.div`
+export const Center = styled.div`
 position: absolute; 
-top: 2.2; 
-left: 2.2cm;
-bottom: 2.3cm;
+top: 35%;
+right: 35%;
+bottom: 35%;
 margin: auto;
 `;
 
-export const BottomCenterPosition = styled.div`
+export const BottomCenter = styled.div`
 position: absolute; 
-right: 50%;
+right: 35%;
 bottom: 13px;
 margin: auto;
 `;
-export const BottomLeftPosition = styled.div`
+export const BottomLeft = styled.div`
 position: absolute; 
 bottom: 13px;
 left: 13px;
 `;
-export const BottomRightPosition = styled.div`
+export const BottomRight = styled.div`
 position: absolute; 
 bottom: 13px;
 right: 13px;
