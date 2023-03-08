@@ -1,5 +1,5 @@
-import Sidebar from "./components/sidebar";
-import ContentArea from "./components/content-area";
+import Sidebar from "./layouts/sidebar-layout";
+import ContentArea from "./layouts/content-area-layout";
 
 function App() {
   return (

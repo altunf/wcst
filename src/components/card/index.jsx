@@ -6,13 +6,13 @@ import { OneFigureCard, TwoFigureCard, ThreeFigureCard, FourFigureCard } from ".
 
 
 export const Card = () => {
-  const numberOfFigures = responseCards[9].figureCount;
+  const numberOfFigures = responseCards[0].figureCount;
   return (
     <S.Card className="relative">
-      {numberOfFigures == 1 && <OneFigureCard />}
-      {numberOfFigures == 2 && <TwoFigureCard />}
-      {numberOfFigures == 3 && <ThreeFigureCard />}
-      {numberOfFigures == 4 && <FourFigureCard />}
+      {numberOfFigures == 1 && <OneFigureCard figure={"circle"}/>}
+      {numberOfFigures == 2 && <TwoFigureCard figure={"cross"} />}
+      {numberOfFigures == 3 && <ThreeFigureCard figure={"cross"} />}
+      {numberOfFigures == 4 && <FourFigureCard figure={"cross"} />}
     </S.Card>
   );
 };

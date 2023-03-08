@@ -14,7 +14,7 @@ right: 13px;
 
 export const CenterPosition = styled.div`
 position: absolute; 
-top: 13px; 
+top: 2.2; 
 left: 2.2cm;
 bottom: 2.3cm;
 margin: auto;
