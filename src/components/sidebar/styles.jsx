@@ -12,6 +12,7 @@ box-shadow: 2px 2px #808080;
 `;
 
 export const A = styled.a`
+margin-top: 20px;
 display: block;
 color: black;
 padding: 16px;

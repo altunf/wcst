@@ -1,5 +1,5 @@
 import React from "react";
-import Wcst from "../../components/wcst";
+import Wcst from "../wcst-page";
 
 function HomePage() {
   return (

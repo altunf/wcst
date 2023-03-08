@@ -1,4 +1,5 @@
 import React from "react";
+import { Card } from "../../components/card";
 
 function ContactPage() {
   return (
@@ -17,6 +18,8 @@ function ContactPage() {
         error dolorem, quis ex sunt quasi totam fuga. Necessitatibus sit nostrum
         cupiditate dicta suscipit maxime vel asperiores, enim facilis!
       </p>
+
+      <Card/>
     </div>
   );
 }
