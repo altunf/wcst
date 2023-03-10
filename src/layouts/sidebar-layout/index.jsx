@@ -4,9 +4,9 @@ import * as S from "./styles";
 function Sidebar() {
   return (
     <S.SideBar>
-      <S.A href="/">Home</S.A>
-      <S.A href="/about">About</S.A>
-      <S.A href="/contact">Contact</S.A>
+      <S.A to="/">Home</S.A>
+      <S.A to="/about">About</S.A>
+      <S.A to="/contact">Contact</S.A>
     </S.SideBar>
   );
 }

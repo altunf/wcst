@@ -37,7 +37,7 @@ function WcstPage() {
       <S.RunBox
 
       >
-        <a href="/wcst-test-window" style={{color: "white",}}>Run</a>
+        <S.RunLink to="/wcst-test-window">Run</S.RunLink>
       </S.RunBox>
       <hr />
       <h2>Resources</h2>

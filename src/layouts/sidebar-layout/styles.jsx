@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const SideBar = styled.div`
@@ -8,13 +9,19 @@ background-color: #ffffff;
 position: fixed;
 height: 100%;
 overflow: auto;
-box-shadow: 2px 2px #808080;
+box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.50);
 `;
 
-export const A = styled.a`
+export const A = styled(NavLink)`
 margin-top: 20px;
 display: block;
 color: black;
 padding: 16px;
 text-decoration: none;
+
+&:hover {
+    background-color: #555;
+  color: white;
+}
+
 `;
