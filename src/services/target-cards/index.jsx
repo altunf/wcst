@@ -1,22 +1,22 @@
 export const targetCards = [
   {
-    targFigureCount: 1,
-    targFigureColor: "red",
+    targCount: 1,
+    targColor: "red",
     targFigure: "triangle",
   },
   {
-    targFigureCount: 2,
-    targFigureColor: "green",
+    targCount: 2,
+    targColor: "green",
     targFigure: "star",
   },
   {
-    targFigureCount: 3,
-    targFigureColor: "yellow",
+    targCount: 3,
+    targColor: "yellow",
     targFigure: "cross",
   },
   {
-    targFigureCount: 4,
-    targFigureColor: "blue",
+    targCount: 4,
+    targColor: "blue",
     targFigure: "circle",
   },
 ];

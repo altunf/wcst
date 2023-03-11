@@ -23,3 +23,8 @@ export const ResponseCards = styled.div`
   position: relative;
   align-items: center;
 `;
+export const Warning = styled.div`
+  margin-top: 10px;
+  margin-left: 110px;
+  font-size: 25px;
+`;
