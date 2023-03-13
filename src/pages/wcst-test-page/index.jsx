@@ -14,6 +14,8 @@ function WcstWindow() {
 
   const { resCount, resColor, resFigure } = responseCards[cardIndex];
 
+  const nextCount = counter + 1;
+
   const switchCondition = (target) => {
     const colorMatch = resColor === target.targColor;
     const figureMatch = resFigure === target.targFigure;
@@ -119,13 +121,7 @@ function WcstWindow() {
         </S.ResponseCards>
       </S.WcstWindow>
       <>
-        <WcstTable
-          result={result}
-          count={result.count}
-          color={result.color}
-          figure={result.figure}
-          other={result.other}
-        />
+        <WcstTable counter={counter} result={result} />
       </>
     </>
   );

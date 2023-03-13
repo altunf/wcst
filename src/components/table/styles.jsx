@@ -1,9 +1,5 @@
 import styled from "styled-components";
 
-export const Category = styled.h2`
-  margin-left: 350px;
-`;
-
 export const Table = styled.div`
   justify-items: left;
   background-color: #d3d0d0;

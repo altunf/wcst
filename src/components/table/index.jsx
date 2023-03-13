@@ -1,17 +1,20 @@
 import React from "react";
+import Category from "../Category";
 import * as S from "./styles";
 
-function WcstTable({ result }) {
+function WcstTable({ result, counter }) {
+  const green = `text-green-500`;
+
   return (
     <div style={{ marginLeft: "500px" }}>
-      <S.Category>Categories : R - Ş - M - R - Ş - M</S.Category>
+      <Category counter={counter} />
       <S.Table>
         {result.map((item, index) => (
           <S.Line key={index}>
-            <S.Box className={item.color && `text-green-500`}> R </S.Box>
-            <S.Box className={item.figure && `text-green-500`}> Ş </S.Box>
-            <S.Box className={item.count && `text-green-500`}> M </S.Box>
-            <S.Box className={item.other && `text-green-500`}> D </S.Box>
+            <S.Box className={item.color && green}> R </S.Box>
+            <S.Box className={item.figure && green}> Ş </S.Box>
+            <S.Box className={item.count && green}> M </S.Box>
+            <S.Box className={item.other && green}> D </S.Box>
           </S.Line>
         ))}
       </S.Table>
