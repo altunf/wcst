@@ -1,13 +1,16 @@
-import React from "react";
+import { useContext } from "react";
 import Category from "../Category";
 import * as S from "./styles";
+import { WcstContext } from "../../components/context/wcstContext";
 
-function WcstTable({ result, counter }) {
+function WcstTable() {
+  const { result } = useContext(WcstContext);
   const green = `text-green-500`;
+  console.log(result);
 
   return (
-    <div style={{ marginLeft: "500px" }}>
-      <Category counter={counter} />
+    <>
+      <Category />
       <S.Table>
         {result.map((item, index) => (
           <S.Line key={index}>
@@ -18,7 +21,7 @@ function WcstTable({ result, counter }) {
           </S.Line>
         ))}
       </S.Table>
-    </div>
+    </>
   );
 }
 

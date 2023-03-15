@@ -5,7 +5,7 @@ import { FigurePosition } from "../figure-position";
 export const Card = ({ count, color, figure }) => {
   return (
     <>
-      <S.Card className="relative">
+      <S.Card>
         <FigurePosition count={count} color={color} figure={figure} />
       </S.Card>
     </>

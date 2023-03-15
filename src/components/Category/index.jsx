@@ -1,18 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
+import { WcstContext } from "../../components/context/wcstContext";
 import * as S from "./style";
 
-function Category({ counter }) {
+function Category() {
+  const { counter } = useContext(WcstContext);
   const green = `text-green-500`;
 
   return (
     <S.Category>
-      <h2>Categories :</h2>
-      <h2 className={counter >= 10 ? green : ``}>R</h2>
-      <h2 className={counter >= 20 ? green : ``}>Ş</h2>
-      <h2 className={counter >= 30 ? green : ``}>M</h2>
-      <h2 className={counter >= 40 ? green : ``}>R</h2>
-      <h2 className={counter >= 50 ? green : ``}>Ş</h2>
-      <h2 className={counter >= 60 ? green : ``}>M</h2>
+      <h3>Kategoriler:</h3>
+      <h3 className={counter >= 10 ? green : ``}>R</h3>
+      <h3 className={counter >= 20 ? green : ``}>Ş</h3>
+      <h3 className={counter >= 30 ? green : ``}>M</h3>
+      <h3 className={counter >= 40 ? green : ``}>R</h3>
+      <h3 className={counter >= 50 ? green : ``}>Ş</h3>
+      <h3 className={counter >= 60 ? green : ``}>M</h3>
     </S.Category>
   );
 }

@@ -1,11 +1,12 @@
 import React from "react";
 import App from "../../App";
+import { WcstProvider } from "../../components/context/wcstContext";
 
 function MainLayout() {
   return (
-    <div>
+    <WcstProvider>
       <App />
-    </div>
+    </WcstProvider>
   );
 }
 

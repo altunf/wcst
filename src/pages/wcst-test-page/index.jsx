@@ -1,20 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext, useState } from "react";
 import { Card } from "../../components/card";
 import { targetCards } from "../../services/target-cards";
 import { responseCards } from "../../services/response-cards";
 import * as S from "./styles";
-import WcstTable from "../../components/table";
+import { NavLink } from "react-router-dom";
+import { WcstContext } from "../../components/context/wcstContext";
 
 function WcstWindow() {
+  const { result, setResult, counter, setCounter } = useContext(WcstContext);
   const [open, setOpen] = useState(false);
   const [warn, setWarn] = useState(false);
-  const [result, setResult] = useState([]);
-  const [counter, setCounter] = useState(0);
   const [cardIndex, setCardIndex] = useState(0);
 
   const { resCount, resColor, resFigure } = responseCards[cardIndex];
-
-  const nextCount = counter + 1;
 
   const switchCondition = (target) => {
     const colorMatch = resColor === target.targColor;
@@ -23,8 +21,6 @@ function WcstWindow() {
 
     const nextCount = counter + 1;
     let match;
-
-    // 1. tour
 
     if (counter < 10) {
       match = colorMatch;
@@ -41,8 +37,6 @@ function WcstWindow() {
       match ? setCounter(nextCount) : setCounter(20);
     }
 
-    // 2. tour
-
     if (counter >= 30) {
       match = colorMatch;
       match ? setCounter(nextCount) : setCounter(30);
@@ -58,13 +52,11 @@ function WcstWindow() {
       match ? setCounter(nextCount) : setCounter(50);
     }
 
-    // finish
-
     (counter === 60 || result.length === 129) && alert("TEST IS FINISHED");
 
     setWarn(match);
-    console.log("nextCount :::: ", nextCount, "counter :::: ", counter);
   };
+  console.log("length:::::", result);
 
   const clickHandle = ({ target }) => {
     setOpen(true);
@@ -90,7 +82,6 @@ function WcstWindow() {
         other: unMatch,
       },
     ]);
-    console.log("RESULT ::::", result, "---", "LENGTH ::::", result.length);
   };
 
   return (
@@ -114,15 +105,12 @@ function WcstWindow() {
         </S.TargetCards>
 
         <S.ResponseCards>
-          <div>
-            <Card count={resCount} color={resColor} figure={resFigure} />
-            <S.Warning>{open && (warn ? "DOĞRU ✅" : "YANLIŞ! ❌")}</S.Warning>
-          </div>
+          <Card count={resCount} color={resColor} figure={resFigure} />
+          <S.Warning>{open && (warn ? "DOĞRU ✅" : "YANLIŞ! ❌")}</S.Warning>
         </S.ResponseCards>
       </S.WcstWindow>
-      <>
-        <WcstTable counter={counter} result={result} />
-      </>
+
+      <NavLink to="/wcst-test-result">RESULTS</NavLink>
     </>
   );
 }

@@ -1,30 +1,25 @@
 import styled from "styled-components";
 
 export const WcstWindow = styled.div`
-  height: 69rem;
-  width: 100rem;
+  height: 600px;
+  max-width: 900px;
+  margin: auto;
   color: white;
-  margin-left: 240px;
   border-radius: 1rem;
-  background: #01141e;
-  background: -webkit-linear-gradient(top, #01141e, #0f222e);
-  background: -moz-linear-gradient(top, #01141e, #0f222e);
   background: linear-gradient(to bottom, #01141e, #0f222e);
 `;
 export const TargetCards = styled.div`
-  margin-left: 15%;
   display: flex;
+  justify-content: center;
+  flex-direction: row;
   position: relative;
-  align-items: center;
 `;
 
 export const ResponseCards = styled.div`
-  margin-top: 20rem;
-  position: relative;
-  align-items: center;
+  margin-top: 15rem;
+  position: relative; ;
 `;
 export const Warning = styled.div`
-  margin-top: 10px;
-  margin-left: 110px;
-  font-size: 25px;
+  margin: auto;
+  font-size: 15px;
 `;

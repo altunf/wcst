@@ -4,8 +4,8 @@ import { Outlet } from "react-router-dom";
 
 function ContentArea() {
   return (
-    <S.Content >
-     <Outlet />
+    <S.Content>
+      <Outlet />
     </S.Content>
   );
 }

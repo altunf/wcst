@@ -1,9 +1,9 @@
 import React from "react";
-import * as S from "./styles"
+import * as S from "./styles";
 
 function WcstPage() {
   return (
-    <div>
+    <S.Div>
       <h1>Wisconsin Card Sorting Test (WCST)</h1>
       <hr />
       <h2>Test İnfo</h2>
@@ -34,13 +34,19 @@ function WcstPage() {
         cupiditate dicta suscipit maxime vel asperiores, enim facilis!
       </p>
       <hr />
-      <S.RunBox
-
-      >
-        <S.RunLink to="/wcst-test-window">Run</S.RunLink>
+      <S.RunBox>
+        <S.RunLink to="/wcst-test-window">
+          <button>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1768/1768113.png"
+              alt=""
+            />
+          </button>
+        </S.RunLink>
       </S.RunBox>
       <hr />
       <h2>Resources</h2>
+
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim pariatur
         nulla cupiditate voluptate voluptates, veniam excepturi quis dolorem
@@ -54,7 +60,7 @@ function WcstPage() {
         cupiditate dicta suscipit maxime vel asperiores, enim facilis!
       </p>
       <hr />
-    </div>
+    </S.Div>
   );
 }
 

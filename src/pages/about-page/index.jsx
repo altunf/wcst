@@ -3,10 +3,8 @@ import React from "react";
 function AboutPage() {
   return (
     <div>
-
       <h1>About Us</h1>
       <hr />
-
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim pariatur
         nulla cupiditate voluptate voluptates, veniam excepturi quis dolorem
@@ -19,7 +17,6 @@ function AboutPage() {
         error dolorem, quis ex sunt quasi totam fuga. Necessitatibus sit nostrum
         cupiditate dicta suscipit maxime vel asperiores, enim facilis!
       </p>
- 
     </div>
   );
 }
