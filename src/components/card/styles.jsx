@@ -6,6 +6,7 @@ export const Card = styled.div`
   height: 3cm;
   width: 3cm;
   background-color: white;
+  border-radius: 8px;
   position: relative;
   display: flex;
 `;

@@ -1,23 +1,32 @@
 import React from "react";
+import * as S from "./styles";
 
 function AboutPage() {
   return (
-    <div>
-      <h1>About Us</h1>
-      <hr />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim pariatur
-        nulla cupiditate voluptate voluptates, veniam excepturi quis dolorem
-        optio consectetur consequuntur facere reprehenderit quod corrupti! Alias
-        minus exercitationem in magni. Perspiciatis dolorem eaque quod repellat
-        odit sint possimus laudantium dicta aliquid, accusamus molestiae unde
-        nostrum cumque tenetur, tempora, velit asperiores aut maiores magni
-        provident necessitatibus temporibus earum? Molestias, fuga sit? Iste
-        aliquid beatae deleniti est dolorum iure minima ipsum voluptates ab
-        error dolorem, quis ex sunt quasi totam fuga. Necessitatibus sit nostrum
-        cupiditate dicta suscipit maxime vel asperiores, enim facilis!
-      </p>
-    </div>
+    <S.AboutPage>
+      <h1>Hakkımda</h1>
+
+      <>
+        <S.Text>
+          <p>
+            Merhaba ben Fırat, psikoloji bölümü mezunuyum. interaktif ve
+            kullanışlı arayüzler oluşturuyorum. JavaScript, CSS, HTML ile
+            çalışmaktan ve tuşlara basmaktan keyif alıyorum!
+          </p>
+          <div>kullandığım bazı teknolojiler</div>
+          <ul>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Express</li>
+            <li>Node</li>
+          </ul>
+          <div>Bana altunnfirat@gmail.com üzerinden ulaşabilirsiniz.</div>
+        </S.Text>
+        <S.Div>
+          <img src="../../../assets/images/photo.jpg" alt="..." />
+        </S.Div>
+      </>
+    </S.AboutPage>
   );
 }
 

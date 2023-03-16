@@ -11,8 +11,9 @@ function WcstWindow() {
   const [open, setOpen] = useState(false);
   const [warn, setWarn] = useState(false);
   const [cardIndex, setCardIndex] = useState(0);
-
   const { resCount, resColor, resFigure } = responseCards[cardIndex];
+
+  const openWarn = open && (warn ? "DOĞRU ✅" : "YANLIŞ! ❌");
 
   const switchCondition = (target) => {
     const colorMatch = resColor === target.targColor;
@@ -106,11 +107,10 @@ function WcstWindow() {
 
         <S.ResponseCards>
           <Card count={resCount} color={resColor} figure={resFigure} />
-          <S.Warning>{open && (warn ? "DOĞRU ✅" : "YANLIŞ! ❌")}</S.Warning>
+          <S.Warning>{openWarn}</S.Warning>
         </S.ResponseCards>
+        <S.NavButton to="/wcst-test-result">RESULTS</S.NavButton>
       </S.WcstWindow>
-
-      <NavLink to="/wcst-test-result">RESULTS</NavLink>
     </>
   );
 }

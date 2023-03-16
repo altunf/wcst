@@ -7,7 +7,6 @@ export const Table = styled.div`
   margin: auto;
   height: 600px;
   max-width: 600px;
-  background-color: #187cad;
   border-radius: 10px;
 `;
 export const Line = styled.div`

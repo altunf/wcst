@@ -5,7 +5,7 @@ function WcstPage() {
   return (
     <S.Div>
       <h1>Wisconsin Card Sorting Test (WCST)</h1>
-      <hr />
+
       <h2>Test İnfo</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim pariatur
@@ -19,7 +19,7 @@ function WcstPage() {
         error dolorem, quis ex sunt quasi totam fuga. Necessitatibus sit nostrum
         cupiditate dicta suscipit maxime vel asperiores, enim facilis!
       </p>
-      <hr />
+
       <h2>Usage</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim pariatur
@@ -33,7 +33,7 @@ function WcstPage() {
         error dolorem, quis ex sunt quasi totam fuga. Necessitatibus sit nostrum
         cupiditate dicta suscipit maxime vel asperiores, enim facilis!
       </p>
-      <hr />
+
       <S.RunBox>
         <S.RunLink to="/wcst-test-window">
           <button>
@@ -44,7 +44,7 @@ function WcstPage() {
           </button>
         </S.RunLink>
       </S.RunBox>
-      <hr />
+
       <h2>Resources</h2>
 
       <p>
@@ -59,7 +59,6 @@ function WcstPage() {
         error dolorem, quis ex sunt quasi totam fuga. Necessitatibus sit nostrum
         cupiditate dicta suscipit maxime vel asperiores, enim facilis!
       </p>
-      <hr />
     </S.Div>
   );
 }

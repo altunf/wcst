@@ -1,9 +1,11 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const WcstWindow = styled.div`
   height: 600px;
   max-width: 900px;
   margin: auto;
+  margin-top: 5rem;
   color: white;
   border-radius: 1rem;
   background: linear-gradient(to bottom, #01141e, #0f222e);
@@ -22,4 +24,10 @@ export const ResponseCards = styled.div`
 export const Warning = styled.div`
   margin: auto;
   font-size: 15px;
+`;
+
+export const NavButton = styled(NavLink)`
+  margin: auto;
+  font-size: 15px;
+  text-decoration: none;
 `;
