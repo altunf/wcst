@@ -10,6 +10,7 @@ function WcstTable() {
 
   return (
     <>
+      <h1>Results</h1>
       <Category />
       <S.Table>
         {result.map((item, index) => (

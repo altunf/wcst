@@ -9,13 +9,9 @@ export const AboutPage = styled.div`
 export const Div = styled.div`
   img {
     opacity: 0.8;
-    border-radius: 1rem;
-
+    border-radius: 2rem;
     margin-left: 600px;
-    padding: 1px 16px;
-    height: 100%;
-
-    box-shadow: 0px -7px 0px -1px rgba(115, 72, 213, 1);
+    height: 25rem;
 
     @media screen and (max-width: 700px) {
       margin-left: 0;

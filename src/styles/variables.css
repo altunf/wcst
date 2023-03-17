@@ -1,0 +1,48 @@
+:root {
+  --body-bg: #101117;
+  --text-color: #dddee2;
+  --title-color: #a6a8b3;
+  --sidebar-color: #14151d;
+  --test-zone: linear-gradient(to bottom, #01141e, #0f222e);
+
+  --font-xs: 12px;
+  --font-s: 14px;
+  --font-m: 16px;
+  --font-l: 18px;
+  --font-xl: 24px;
+
+  --transition: ease-in-out 0.5s;
+  --box-shadow:  20px 20px 10px -10px rgba(1, 1, 1, 0.2);
+
+  --card-l: 7cm;
+  --figure-l: 75px;
+
+  --triangle: polygon(50% 0%, 0% 100%, 100% 100%);
+  --circle: circle(50% at 50% 50%);
+  --cross: polygon(
+    0 33%,
+    33% 33%,
+    33% 0,
+    66% 0,
+    66% 33%,
+    100% 33%,
+    100% 66%,
+    66% 66%,
+    66% 100%,
+    33% 100%,
+    33% 66%,
+    0 66%
+  );
+  --star: polygon(
+    50% 0%,
+    61% 40%,
+    100% 40%,
+    68% 60%,
+    85% 100%,
+    49% 75%,
+    15% 100%,
+    32% 60%,
+    0 40%,
+    39% 40%
+  );
+}

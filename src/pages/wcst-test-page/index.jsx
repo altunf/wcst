@@ -3,7 +3,6 @@ import { Card } from "../../components/card";
 import { targetCards } from "../../services/target-cards";
 import { responseCards } from "../../services/response-cards";
 import * as S from "./styles";
-import { NavLink } from "react-router-dom";
 import { WcstContext } from "../../components/context/wcstContext";
 
 function WcstWindow() {
@@ -14,6 +13,7 @@ function WcstWindow() {
   const { resCount, resColor, resFigure } = responseCards[cardIndex];
 
   const openWarn = open && (warn ? "DOĞRU ✅" : "YANLIŞ! ❌");
+  const finished = counter === 2 || result.length === 129;
 
   const switchCondition = (target) => {
     const colorMatch = resColor === target.targColor;
@@ -53,8 +53,6 @@ function WcstWindow() {
       match ? setCounter(nextCount) : setCounter(50);
     }
 
-    (counter === 60 || result.length === 129) && alert("TEST IS FINISHED");
-
     setWarn(match);
   };
   console.log("length:::::", result);
@@ -88,28 +86,34 @@ function WcstWindow() {
   return (
     <>
       <S.WcstWindow>
-        <S.TargetCards>
-          {targetCards.map((target, index) => (
-            <div
-              key={index}
-              onClick={() => {
-                clickHandle({ target });
-              }}
-            >
-              <Card
-                count={target.targCount}
-                color={target.targColor}
-                figure={target.targFigure}
-              />
-            </div>
-          ))}
-        </S.TargetCards>
-
-        <S.ResponseCards>
-          <Card count={resCount} color={resColor} figure={resFigure} />
-          <S.Warning>{openWarn}</S.Warning>
-        </S.ResponseCards>
-        <S.NavButton to="/wcst-test-result">RESULTS</S.NavButton>
+        {finished ? (
+          <S.NavButton to="/wcst-test-result">
+            <div>Go to Results</div>
+          </S.NavButton>
+        ) : (
+          <>
+            <S.TargetCards>
+              {targetCards.map((target, index) => (
+                <div
+                  key={index}
+                  onClick={() => {
+                    clickHandle({ target });
+                  }}
+                >
+                  <Card
+                    count={target.targCount}
+                    color={target.targColor}
+                    figure={target.targFigure}
+                  />
+                </div>
+              ))}
+            </S.TargetCards>
+            <S.ResponseCards>
+              <Card count={resCount} color={resColor} figure={resFigure} />
+              <S.Warning>{openWarn}</S.Warning>
+            </S.ResponseCards>
+          </>
+        )}
       </S.WcstWindow>
     </>
   );

@@ -6,25 +6,11 @@ export const SideBar = styled.div`
   padding: 0;
   width: 200px;
   height: 100%;
-  background-color: #14151d;
+  background-color: var(--sidebar-color);
   position: fixed;
   overflow: auto;
-
-  img {
-    height: 11rem;
-    width: 95%;
-    border-radius: 16px;
-    margin: auto;
-    opacity: 0.5;
-    &:hover {
-      opacity: 1;
-    }
-
-    @media screen and (max-width: 700px) {
-      width: 100%;
-      height: 15rem;
-    }
-  }
+  box-shadow: var(--box-shadow);
+  border-radius: 10px;
 
   @media screen and (max-width: 700px) {
     width: 100%;
@@ -36,13 +22,13 @@ export const SideBar = styled.div`
 export const A = styled(NavLink)`
   margin-top: 20px;
   display: block;
-  color: #dddee2;
+  color: var(--text-color);
   padding: 16px;
   text-decoration: none;
   text-align: center;
 
   &:hover {
-    color: #a6a8b3;
+    color: var(--title-color);
   }
   @media screen and (max-width: 400px) {
     text-align: center;
@@ -50,5 +36,24 @@ export const A = styled(NavLink)`
   }
   @media screen and (max-width: 700px) {
     float: left;
+  }
+`;
+
+export const Logo = styled(NavLink)`
+  img {
+    height: 11rem;
+    width: 95%;
+    border-radius: 16px;
+    margin: auto;
+    opacity: 0.2;
+    &:hover {
+      opacity: 1;
+      transition: ease-in-out 0.5s;
+    }
+
+    @media screen and (max-width: 700px) {
+      width: 100%;
+      height: 15rem;
+    }
   }
 `;

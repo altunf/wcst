@@ -2,18 +2,15 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const WcstWindow = styled.div`
-  height: 600px;
-  max-width: 900px;
+  height: 1000px;
   margin: auto;
-  margin-top: 5rem;
   color: white;
   border-radius: 1rem;
-  background: linear-gradient(to bottom, #01141e, #0f222e);
+  background: var(--test-zone);
 `;
 export const TargetCards = styled.div`
   display: flex;
   justify-content: center;
-  flex-direction: row;
   position: relative;
 `;
 
@@ -23,11 +20,17 @@ export const ResponseCards = styled.div`
 `;
 export const Warning = styled.div`
   margin: auto;
-  font-size: 15px;
+  margin-left: 4.5rem;
+  font-size: var(--font-xl);
 `;
 
 export const NavButton = styled(NavLink)`
-  margin: auto;
-  font-size: 15px;
+  font-size: var(--font-s);
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+  color: white;
+  div {
+    margin-top: 300px;
+  }
 `;

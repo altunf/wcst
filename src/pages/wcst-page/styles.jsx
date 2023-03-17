@@ -8,29 +8,42 @@ export const Div = styled.div`
 `;
 
 export const RunBox = styled.div`
-  border-radius: 16px;
   display: flex;
-  height: 14rem;
+  height: 16rem;
   max-width: 400px;
   margin: auto;
   align-items: center;
 
   img {
-    height: 4rem;
-
-    &:hover {
-      height: 6rem;
-    }
+    height: 16rem;
+    opacity: 0.7;
+    border-radius: 16px;
   }
+`;
 
-  button {
-    cursor: pointer;
-    border: none;
-    border-radius: 15px;
+export const Button = styled.button`
+  display: none;
+`;
+
+export const Image = styled.img`
+  height: 16rem;
+  opacity: 0.7;
+  border-radius: 16px;
+  opacity: 0.7;
+  box-shadow: var(--box-shadow);
+
+  &:hover {
+    opacity: 1;
+    transition: var(--transition);
   }
 `;
 
 export const RunLink = styled(NavLink)`
   text-decoration: none;
+  text-align: center;
   margin: auto;
+  color: var(--text-color);
+  &:hover {
+    color: var(--title-color);
+  }
 `;
