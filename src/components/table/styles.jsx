@@ -7,13 +7,13 @@ export const Table = styled.div`
   margin: auto;
   height: 600px;
   max-width: 600px;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
 `;
 export const Line = styled.div`
   display: flex;
   margin: 2px;
 `;
 export const Box = styled.div`
-  font-size: 14px;
+  font-size: var(--font-s);
   margin: 2px;
 `;

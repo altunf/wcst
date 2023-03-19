@@ -5,17 +5,19 @@
   --sidebar-color: #14151d;
   --test-zone: linear-gradient(to bottom, #01141e, #0f222e);
 
-  --font-xs: 12px;
   --font-s: 14px;
   --font-m: 16px;
   --font-l: 18px;
   --font-xl: 24px;
-
-  --transition: ease-in-out 0.5s;
-  --box-shadow:  20px 20px 10px -10px rgba(1, 1, 1, 0.2);
+  --font-xxl: 48px;
 
   --card-l: 7cm;
   --figure-l: 75px;
+
+  --border-radius: 8px;
+
+  --transition: ease-in-out 0.4s;
+  --box-shadow: 20px 20px 10px -10px rgba(1, 1, 1, 0.5);
 
   --triangle: polygon(50% 0%, 0% 100%, 100% 100%);
   --circle: circle(50% at 50% 50%);

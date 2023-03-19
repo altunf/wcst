@@ -6,7 +6,7 @@ function AboutPage() {
     <S.AboutPage>
       <h1>Hakkımda</h1>
 
-      <>
+      <S.Div>
         <S.Text>
           <p>
             Merhaba ben Fırat, psikoloji bölümü mezunuyum. interaktif ve
@@ -22,10 +22,10 @@ function AboutPage() {
           </ul>
           <div>Bana altunnfirat@gmail.com üzerinden ulaşabilirsiniz.</div>
         </S.Text>
-        <S.Div>
+        <S.Image>
           <img src="../../../assets/images/photo.jpg" alt="..." />
-        </S.Div>
-      </>
+        </S.Image>
+      </S.Div>
     </S.AboutPage>
   );
 }

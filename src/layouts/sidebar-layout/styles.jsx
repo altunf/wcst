@@ -2,15 +2,13 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const SideBar = styled.div`
-  margin: 0;
-  padding: 0;
-  width: 200px;
+  width: 250px;
   height: 100%;
-  background-color: var(--sidebar-color);
   position: fixed;
   overflow: auto;
   box-shadow: var(--box-shadow);
-  border-radius: 10px;
+  border-radius: var(--border-radius);
+  background-color: var(--sidebar-color);
 
   @media screen and (max-width: 700px) {
     width: 100%;
@@ -41,19 +39,13 @@ export const A = styled(NavLink)`
 
 export const Logo = styled(NavLink)`
   img {
-    height: 11rem;
-    width: 95%;
-    border-radius: 16px;
+    height: 12rem;
     margin: auto;
-    opacity: 0.2;
+    opacity: 0.3;
+
     &:hover {
       opacity: 1;
-      transition: ease-in-out 0.5s;
-    }
-
-    @media screen and (max-width: 700px) {
-      width: 100%;
-      height: 15rem;
+      transition: var(--transition);
     }
   }
 `;

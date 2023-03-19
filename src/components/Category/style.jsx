@@ -5,6 +5,6 @@ export const Category = styled.div`
   margin: auto;
   max-width: 320px;
   h3 {
-    margin: 0.3rem;
+    margin: auto;
   }
 `;

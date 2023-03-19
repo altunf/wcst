@@ -9,27 +9,17 @@ export const Div = styled.div`
 
 export const RunBox = styled.div`
   display: flex;
-  height: 16rem;
-  max-width: 400px;
+  max-width: 200px;
   margin: auto;
+  margin-top: 2rem;
   align-items: center;
-
-  img {
-    height: 16rem;
-    opacity: 0.7;
-    border-radius: 16px;
-  }
-`;
-
-export const Button = styled.button`
-  display: none;
 `;
 
 export const Image = styled.img`
-  height: 16rem;
+  max-width: 600px;
+  margin: auto;
   opacity: 0.7;
-  border-radius: 16px;
-  opacity: 0.7;
+  border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
 
   &:hover {
@@ -39,9 +29,6 @@ export const Image = styled.img`
 `;
 
 export const RunLink = styled(NavLink)`
-  text-decoration: none;
-  text-align: center;
-  margin: auto;
   color: var(--text-color);
   &:hover {
     color: var(--title-color);

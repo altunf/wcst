@@ -7,13 +7,41 @@ import { WcstContext } from "../../components/context/wcstContext";
 
 function WcstWindow() {
   const { result, setResult, counter, setCounter } = useContext(WcstContext);
+  const [cardIndex, setCardIndex] = useState(0);
   const [open, setOpen] = useState(false);
   const [warn, setWarn] = useState(false);
-  const [cardIndex, setCardIndex] = useState(0);
+  const [testInfo, setTestInfo] = useState(false);
+
   const { resCount, resColor, resFigure } = responseCards[cardIndex];
 
   const openWarn = open && (warn ? "DOĞRU ✅" : "YANLIŞ! ❌");
-  const finished = counter === 2 || result.length === 129;
+  const completed = counter === 60 || result.length === 129;
+
+  const targetCardsList = (
+    <>
+      {targetCards.map((target, index) => (
+        <div
+          key={index}
+          onClick={() => {
+            clickHandle({ target });
+          }}
+        >
+          <Card
+            count={target.targCount}
+            color={target.targColor}
+            figure={target.targFigure}
+          />
+        </div>
+      ))}
+    </>
+  );
+
+  const responseCardsList = (
+    <>
+      <Card count={resCount} color={resColor} figure={resFigure} />
+      <S.Warning>{openWarn}</S.Warning>
+    </>
+  );
 
   const switchCondition = (target) => {
     const colorMatch = resColor === target.targColor;
@@ -55,7 +83,6 @@ function WcstWindow() {
 
     setWarn(match);
   };
-  console.log("length:::::", result);
 
   const clickHandle = ({ target }) => {
     setOpen(true);
@@ -86,32 +113,30 @@ function WcstWindow() {
   return (
     <>
       <S.WcstWindow>
-        {finished ? (
-          <S.NavButton to="/wcst-test-result">
-            <div>Go to Results</div>
-          </S.NavButton>
+        {testInfo ? (
+          completed ? (
+            <S.NavLinkButton to="/wcst-test-result">
+              <S.Button>Sonuçları Göster</S.Button>
+            </S.NavLinkButton>
+          ) : (
+            <>
+              <S.TargetCards> {targetCardsList}</S.TargetCards>
+              <S.ResponseCards> {responseCardsList}</S.ResponseCards>
+            </>
+          )
         ) : (
           <>
-            <S.TargetCards>
-              {targetCards.map((target, index) => (
-                <div
-                  key={index}
-                  onClick={() => {
-                    clickHandle({ target });
-                  }}
-                >
-                  <Card
-                    count={target.targCount}
-                    color={target.targColor}
-                    figure={target.targFigure}
-                  />
-                </div>
-              ))}
-            </S.TargetCards>
-            <S.ResponseCards>
-              <Card count={resCount} color={resColor} figure={resFigure} />
-              <S.Warning>{openWarn}</S.Warning>
-            </S.ResponseCards>
+            <S.Start>
+              <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                harum ipsam accusantium. Dicta dolorum suscipit eos quae
+                voluptas. Eligendi commodi vero suscipit quibusdam, magni est
+                libero nulla accusantium laboriosam amet?
+              </div>
+            </S.Start>
+            <S.Start>
+              <S.Button onClick={() => setTestInfo(true)}>Start</S.Button>
+            </S.Start>
           </>
         )}
       </S.WcstWindow>
