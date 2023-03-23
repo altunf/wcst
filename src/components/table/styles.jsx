@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const Div = styled.div`
+  margin-top: 3rem;
+`;
+
 export const Table = styled.div`
   display: flex;
   flex-wrap: wrap;

@@ -5,26 +5,23 @@ function AboutPage() {
   return (
     <S.AboutPage>
       <h1>Hakkımda</h1>
-
       <S.Div>
-        <S.Text>
+        <div>
           <p>
-            Merhaba ben Fırat, psikoloji bölümü mezunuyum. interaktif ve
-            kullanışlı arayüzler oluşturuyorum. JavaScript, CSS, HTML ile
-            çalışmaktan ve tuşlara basmaktan keyif alıyorum!
+            Merhaba ben Fırat, interaktif ve kullanışlı arayüzler
+            oluşturan/tasarlayan bir frontend geliştirici ve aynı zamanda bir
+            psikoloğum. Tartışmadan işbirliğine kadar programlama sürecinin her
+            adımından ve tuşlara basmaktan oldukça keyif alıyorum.
           </p>
-          <div>kullandığım bazı teknolojiler</div>
-          <ul>
+          <div>Son zamanlarda kullandığım bazı teknolojiler:</div>
+          <p>
             <li>JavaScript</li>
             <li>React</li>
             <li>Express</li>
             <li>Node</li>
-          </ul>
-          <div>Bana altunnfirat@gmail.com üzerinden ulaşabilirsiniz.</div>
-        </S.Text>
-        <S.Image>
-          <img src="../../../assets/images/photo.jpg" alt="..." />
-        </S.Image>
+          </p>
+        </div>
+        <img src="../../../assets/images/about.jpg" alt="..." />
       </S.Div>
     </S.AboutPage>
   );

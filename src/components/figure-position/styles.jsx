@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 export const TopLeft = styled.div`
   position: absolute;
-  top: 13px;
-  left: 13px;
+  top: 10%;
+  left: 10%;
 `;
 
 export const TopRight = styled.div`
   position: absolute;
-  top: 13px;
-  right: 13px;
+  top: 10%;
+  right: 10%;
 `;
 
 export const Center = styled.div`
@@ -21,15 +21,15 @@ export const Center = styled.div`
 export const BottomCenter = styled.div`
   position: absolute;
   right: 35%;
-  bottom: 13px;
+  bottom: 10%;
 `;
 export const BottomLeft = styled.div`
   position: absolute;
-  bottom: 13px;
-  left: 13px;
+  bottom: 10%;
+  left: 10%;
 `;
 export const BottomRight = styled.div`
   position: absolute;
-  bottom: 13px;
-  right: 13px;
+  bottom: 10%;
+  right: 10%;
 `;

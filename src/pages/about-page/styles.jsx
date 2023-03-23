@@ -8,31 +8,21 @@ export const AboutPage = styled.div`
 
 export const Div = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  gap: 1rem;
 
-  @media screen and (max-width: 400px) {
-    height: auto;
-    display: flex;
-    flex-direction: column;
+  @media screen and (max-width: 700px) {
+    flex-wrap: wrap-reverse;
   }
-`;
 
-export const Image = styled.div`
   img {
-    opacity: 0.5;
+    margin: auto;
+    height: 400px;
+    opacity: 0.7;
     border-radius: var(--border-radius);
-    position: relative;
 
     &:hover {
       opacity: 1;
       transition: var(--transition);
     }
-  }
-`;
-
-export const Text = styled.div`
-  overflow: auto;
-  @media screen and (max-width: 700px) {
-    height: auto;
   }
 `;

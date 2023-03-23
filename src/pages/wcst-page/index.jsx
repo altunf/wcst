@@ -7,7 +7,7 @@ function WcstPage() {
       <h1>Wisconsin Card Sorting Test</h1>
 
       <p>
-        Wisconsin Card Sorting Test(WCST), 1948 yılında David A. Grant ve Esta
+        Wisconsin Card Sorting Test (WCST), 1948 yılında David A. Grant ve Esta
         A. Berg tarafından geliştirilen ve frontal lob ile ilgili ölçümlerde
         kullanılan nöropsikolojik bir testtir. Teste son halini; Robert K.
         Heaton, Gordon J. Chelune, Jack L. Talley, Gary G. Kay ve Glenn Curtiss
@@ -24,31 +24,34 @@ function WcstPage() {
         karmaşık süreçlerden oluşmaktadır.
       </p>
 
-      <p></p>
-
       <h2>Materyaller ve Uygulama</h2>
 
       <p>
         Test; farklı şekillerden, renklerden ve şekil sayısından oluşan 4 adet{" "}
         <b>uyarıcı</b> karttan ve her destede 64 kartın olduğu 2 destelik{" "}
-        <b>tepki</b> kartlarından oluşmaktadır. Hem uyarıcı kartları hem de
-        tepki kartları standart bir sıraya göre dizilmektedir.
+        <b>tepki</b> kartlarından oluşmaktadır. Hem uyarıcı kartlar hem de tepki
+        kartları standart bir sıraya göre dizilmektedir.
       </p>
 
       <p>
         Katılımcıdan her bir tepki kartını uyarıcı kartlardan biriyle
         eşleştirmesi beklenmektedir. Katılımcı yaptığı eşleştirmelerde gözlemci
         tarafından doğru veya yanlış şeklinde uyarılmaktadır ve eşleştirmeler
-        bir form ile kayıt altına alınmaktadır.{" "}
+        bir form ile kayıt altına alınmaktadır.
+      </p>
+
+      <p>
+        <i className="pi pi-circle-fill" style={{ color: "red" }}></i> Bu
+        çalışmada kullanılan ölçüm kriterleri WCST'nin orjinal kriterleri ile
+        aynı değildir. WCST'nin telif hakkı, Psychological Assessment Resources,
+        Inc. (PAR) tarafından korunmaktadır. Orijinal Wisconsin Card Sorting
+        Test'i almak isterseniz PAR ile iletişime geçebilirsiniz.
       </p>
       <S.Image src="../../../assets/images/2.png" alt="" />
 
-      <h3>Teste Başlama</h3>
-      <div>Aşağıdaki görsele tıklayarak teste başlayabilirsiniz. </div>
-
       <S.RunBox>
         <S.RunLink to="/wcst-test-window">
-          <button>Click</button>
+          <S.Button>Başlamak İçin Tıklayınız</S.Button>
         </S.RunLink>
       </S.RunBox>
 
@@ -57,19 +60,22 @@ function WcstPage() {
       <ul>
         <li>
           <p>
-            Bayer, Merve. (2013). Yönetici Karmaşık Dikkat İşlevlerini
-            Değerlendiren Testlerin 8, 9 Ve 10 Yaş Grubu Türk Çocuklarında
-            Güvenilirlik Ve Geçerlilik Çalışmaları. Yayımlanmamış yüksek lisans
-            tezi. İstanbul : İstanbul Bilim Üniversitesi, Sosyal Bilimler
-            Enstitüsü.
+            Bayer, Merve. (2013).{" "}
+            <i>
+              Yönetici Karmaşık Dikkat İşlevlerini Değerlendiren Testlerin 8, 9
+              Ve 10 Yaş Grubu Türk Çocuklarında Güvenilirlik Ve Geçerlilik
+              Çalışmaları
+            </i>{" "}
+            [Yayımlanmamış yüksek lisans tezi]. İstanbul Bilim Üniversitesi.
           </p>
         </li>
         <li>
           <p>
-            Karakaş, S., Irak, M., Kurt, M., & Erzengin, Ö.U. (1999). Wisconsin
+            Karakaş, S., Irak, M., Kurt, M., ve Erzengin, Ö.U. (1999). Wisconsin
             Kart Eşleme Testi ve Stroop Testi TBAG Formu: Ölçülen özellikler
-            açısından karşılaştırmalı analiz. Psikiyatri Psikoloji
-            Psikofarmakoloji Dergisi, 7(3), 179-192.
+            açısından karşılaştırmalı analiz.
+            <i> Psikiyatri Psikoloji Psikofarmakoloji Dergisi, 7</i> (3),
+            179-192.
           </p>
         </li>
         <li>

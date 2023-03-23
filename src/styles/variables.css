@@ -1,6 +1,6 @@
 :root {
   --body-bg: #101117;
-  --text-color: #dddee2;
+  --text-color:rgb(206, 207, 212);
   --title-color: #a6a8b3;
   --sidebar-color: #14151d;
   --test-zone: linear-gradient(to bottom, #01141e, #0f222e);
@@ -11,7 +11,10 @@
   --font-xl: 24px;
   --font-xxl: 48px;
 
+  --card-s: 2cm;
   --card-l: 7cm;
+
+  --figure-s: 25px;
   --figure-l: 75px;
 
   --border-radius: 8px;

@@ -11,11 +11,11 @@ function WcstWindow() {
   const [open, setOpen] = useState(false);
   const [warn, setWarn] = useState(false);
   const [testInfo, setTestInfo] = useState(false);
-
+  const [completed, setCompleted] = useState(false);
   const { resCount, resColor, resFigure } = responseCards[cardIndex];
 
-  const openWarn = open && (warn ? "DOĞRU ✅" : "YANLIŞ! ❌");
-  const completed = counter === 60 || result.length === 129;
+  const openWarn = open && (warn ? "✅ DOĞRU" : "❌ YANLIŞ!");
+  const testCompleted = counter === 2 || result.length === 129;
 
   const targetCardsList = (
     <>
@@ -51,40 +51,43 @@ function WcstWindow() {
     const nextCount = counter + 1;
     let match;
 
-    if (counter < 10) {
+    if (counter < 8) {
       match = colorMatch;
       match ? setCounter(nextCount) : setCounter(0);
     }
 
-    if (counter >= 10) {
+    if (counter >= 8) {
       match = figureMatch;
-      match ? setCounter(nextCount) : setCounter(10);
+      match ? setCounter(nextCount) : setCounter(8);
     }
 
-    if (counter >= 20) {
+    if (counter >= 16) {
       match = countMatch;
-      match ? setCounter(nextCount) : setCounter(20);
+      match ? setCounter(nextCount) : setCounter(16);
     }
 
-    if (counter >= 30) {
+    if (counter >= 24) {
       match = colorMatch;
-      match ? setCounter(nextCount) : setCounter(30);
+      match ? setCounter(nextCount) : setCounter(24);
     }
 
-    if (counter >= 40) {
+    if (counter >= 32) {
       match = figureMatch;
-      match ? setCounter(nextCount) : setCounter(40);
+      match ? setCounter(nextCount) : setCounter(32);
     }
 
-    if (counter >= 50) {
+    if (counter >= 48) {
       match = countMatch;
-      match ? setCounter(nextCount) : setCounter(50);
+      match ? setCounter(nextCount) : setCounter(48);
     }
 
     setWarn(match);
   };
 
   const clickHandle = ({ target }) => {
+    if (testCompleted) {
+      setCompleted(true);
+    }
     setOpen(true);
     setTimeout(() => {
       setOpen(false);
@@ -111,36 +114,59 @@ function WcstWindow() {
   };
 
   return (
-    <>
-      <S.WcstWindow>
-        {testInfo ? (
-          completed ? (
-            <S.NavLinkButton to="/wcst-test-result">
-              <S.Button>Sonuçları Göster</S.Button>
-            </S.NavLinkButton>
-          ) : (
-            <>
-              <S.TargetCards> {targetCardsList}</S.TargetCards>
-              <S.ResponseCards> {responseCardsList}</S.ResponseCards>
-            </>
-          )
+    <S.WcstWindow>
+      {testInfo ? (
+        completed ? (
+          <S.NavLinkButton to="/wcst-test-result">
+            <S.Button>Sonuçları Göster</S.Button>
+          </S.NavLinkButton>
         ) : (
           <>
-            <S.Start>
-              <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-                harum ipsam accusantium. Dicta dolorum suscipit eos quae
-                voluptas. Eligendi commodi vero suscipit quibusdam, magni est
-                libero nulla accusantium laboriosam amet?
-              </div>
-            </S.Start>
-            <S.Start>
-              <S.Button onClick={() => setTestInfo(true)}>Start</S.Button>
-            </S.Start>
+            <S.TargetCards> {targetCardsList}</S.TargetCards>
+            <S.ResponseCards> {responseCardsList}</S.ResponseCards>
           </>
-        )}
-      </S.WcstWindow>
-    </>
+        )
+      ) : (
+        <>
+          <S.Start>
+            <div>
+              <p>
+                Bu testte sizden istenen, ekranın sol altında bulunan tepki
+                kartını yukarıda yer alan 4 adet uyarıcı karttan biriyle
+                eşlemenizdir.
+              </p>
+              <p>
+                Yaptığınız eşleme doğru ise ekranda "✅ DOĞRU" uyarısını, yanlış
+                ise "❌ YANLIŞ!" uyarını göreceksiniz. Eşleşmeniz yanlış ise
+                tepki kartının değişmesini bekleyin ve değişen karta göre doğru
+                eşlemeyi yapmaya çalışın.
+              </p>
+              <img src="../../../assets/images/2.png" alt="" />
+
+              <p>Eşleme yapmak için aşağıdaki adımları izleyiniz.</p>
+              <ul>
+                <li>
+                  1. Tepki kartına bakıp eşleme yapacağınız uyarıcı kartı
+                  belirleyin.
+                </li>
+                <li>2. Belirlediğiniz uyarıcı karta fare ile tıklayın.</li>
+                <li>
+                  3. Fare ile tıkladıktan sonra tepki kartının değişmesini
+                  bekleyin.
+                </li>
+                <li>
+                  4. Tepki kartı değiştikten sonra yukarıdaki adımları
+                  tekrarlayın.
+                </li>
+              </ul>
+            </div>
+          </S.Start>
+          <S.Start>
+            <S.Button onClick={() => setTestInfo(true)}>Başla</S.Button>
+          </S.Start>
+        </>
+      )}
+    </S.WcstWindow>
   );
 }
 

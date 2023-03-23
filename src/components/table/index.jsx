@@ -6,10 +6,8 @@ import { WcstContext } from "../../components/context/wcstContext";
 function WcstTable() {
   const { result } = useContext(WcstContext);
   const green = `text-green-500`;
-  console.log(result);
-
   return (
-    <>
+    <S.Div>
       <Category />
       <S.Table>
         {result.map((item, index) => (
@@ -21,7 +19,7 @@ function WcstTable() {
           </S.Line>
         ))}
       </S.Table>
-    </>
+    </S.Div>
   );
 }
 
