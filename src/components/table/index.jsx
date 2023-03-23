@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import Category from "../Category";
 import * as S from "./styles";
-import { WcstContext } from "../../components/context/wcstContext";
+import { WcstContext } from "../../components/context";
 
 function WcstTable() {
   const { result } = useContext(WcstContext);

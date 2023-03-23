@@ -3,7 +3,7 @@ import { Card } from "../../components/card";
 import { targetCards } from "../../services/target-cards";
 import { responseCards } from "../../services/response-cards";
 import * as S from "./styles";
-import { WcstContext } from "../../components/context/wcstContext";
+import { WcstContext } from "../../components/context";
 
 function WcstWindow() {
   const { result, setResult, counter, setCounter } = useContext(WcstContext);
@@ -11,11 +11,11 @@ function WcstWindow() {
   const [open, setOpen] = useState(false);
   const [warn, setWarn] = useState(false);
   const [testInfo, setTestInfo] = useState(false);
-  const [completed, setCompleted] = useState(false);
+
   const { resCount, resColor, resFigure } = responseCards[cardIndex];
 
   const openWarn = open && (warn ? "✅ DOĞRU" : "❌ YANLIŞ!");
-  const testCompleted = counter === 2 || result.length === 129;
+  const testCompleted = counter === 48 || result.length === 129;
 
   const targetCardsList = (
     <>
@@ -56,38 +56,35 @@ function WcstWindow() {
       match ? setCounter(nextCount) : setCounter(0);
     }
 
-    if (counter >= 8) {
+    if (counter >= 16) {
       match = figureMatch;
       match ? setCounter(nextCount) : setCounter(8);
     }
 
-    if (counter >= 16) {
+    if (counter >= 24) {
       match = countMatch;
       match ? setCounter(nextCount) : setCounter(16);
     }
 
-    if (counter >= 24) {
+    if (counter >= 32) {
       match = colorMatch;
       match ? setCounter(nextCount) : setCounter(24);
     }
 
-    if (counter >= 32) {
+    if (counter >= 40) {
       match = figureMatch;
       match ? setCounter(nextCount) : setCounter(32);
     }
 
     if (counter >= 48) {
       match = countMatch;
-      match ? setCounter(nextCount) : setCounter(48);
+      match ? setCounter(nextCount) : setCounter(40);
     }
 
     setWarn(match);
   };
 
   const clickHandle = ({ target }) => {
-    if (testCompleted) {
-      setCompleted(true);
-    }
     setOpen(true);
     setTimeout(() => {
       setOpen(false);
@@ -113,10 +110,16 @@ function WcstWindow() {
     ]);
   };
 
+  const handleStart = () => {
+    setCounter(0);
+    setTestInfo(true);
+    setResult([]);
+  };
+
   return (
     <S.WcstWindow>
       {testInfo ? (
-        completed ? (
+        testCompleted ? (
           <S.NavLinkButton to="/wcst-test-result">
             <S.Button>Sonuçları Göster</S.Button>
           </S.NavLinkButton>
@@ -162,7 +165,7 @@ function WcstWindow() {
             </div>
           </S.Start>
           <S.Start>
-            <S.Button onClick={() => setTestInfo(true)}>Başla</S.Button>
+            <S.Button onClick={handleStart}>Başla</S.Button>
           </S.Start>
         </>
       )}
