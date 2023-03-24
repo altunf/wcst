@@ -9,13 +9,13 @@ export const Table = styled.div`
   flex-wrap: wrap;
   flex-direction: column;
   margin: auto;
-  height: 600px;
-  max-width: 600px;
+  height: 350px;
+  max-width: 250px;
   border-radius: var(--border-radius);
 `;
 export const Line = styled.div`
   display: flex;
-  margin: 2px;
+  margin: 3px;
 `;
 export const Box = styled.div`
   font-size: var(--font-s);

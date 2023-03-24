@@ -56,27 +56,27 @@ function WcstWindow() {
       match ? setCounter(nextCount) : setCounter(0);
     }
 
-    if (counter >= 16) {
+    if (counter >= 8) {
       match = figureMatch;
       match ? setCounter(nextCount) : setCounter(8);
     }
 
-    if (counter >= 24) {
+    if (counter >= 16) {
       match = countMatch;
       match ? setCounter(nextCount) : setCounter(16);
     }
 
-    if (counter >= 32) {
+    if (counter >= 24) {
       match = colorMatch;
       match ? setCounter(nextCount) : setCounter(24);
     }
 
-    if (counter >= 40) {
+    if (counter >= 32) {
       match = figureMatch;
       match ? setCounter(nextCount) : setCounter(32);
     }
 
-    if (counter >= 48) {
+    if (counter >= 40) {
       match = countMatch;
       match ? setCounter(nextCount) : setCounter(40);
     }
