@@ -21,7 +21,7 @@ function AboutPage() {
             <li>Node</li>
           </p>
         </div>
-        <img src="../../../public/images/about.jpg" alt="..." />
+        <img src="../../../images/about.jpg" alt="..." />
       </S.Div>
     </S.AboutPage>
   );

@@ -5,7 +5,7 @@ function Sidebar() {
   return (
     <S.SideBar>
       <S.Logo to="/">
-        <img src="../../../public/images/logo.png" alt="logo" />
+        <img src="../../../images/logo.png" alt="logo" />
       </S.Logo>
 
       <S.Menu to="/">Ana Sayfa</S.Menu>
