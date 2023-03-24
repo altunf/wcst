@@ -47,7 +47,7 @@ function WcstPage() {
         Inc. (PAR) tarafından korunmaktadır. Orijinal Wisconsin Card Sorting
         Test'i almak isterseniz PAR ile iletişime geçebilirsiniz.
       </p>
-      <S.Image src="../../../assets/images/2.png" alt="" />
+      <S.Image src="../../../public/images/2.png" alt="" />
 
       <S.RunBox>
         <S.RunLink to="/wcst-test-window">

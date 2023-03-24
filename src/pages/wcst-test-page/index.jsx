@@ -144,7 +144,7 @@ function WcstWindow() {
                 tepki kartının değişmesini bekleyin ve değişen karta göre doğru
                 eşlemeyi yapmaya çalışın.
               </p>
-              <img src="../../../assets/images/2.png" alt="" />
+              <img src="../../../public/images/2.png" alt="" />
 
               <p>Eşleme yapmak için aşağıdaki adımları izleyiniz.</p>
               <ul>
