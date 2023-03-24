@@ -5,7 +5,7 @@
 - Bu web uygulaması nöropsikolojik bir test olan WCST'nin bir benzeridir.
 
  
- WCST'nin telif hakkı, Psychological Assessment Resources, Inc. (PAR) tarafından korunmaktadır. 
+ - WCST'nin telif hakkı, Psychological Assessment Resources, Inc. (PAR) tarafından korunmaktadır. 
 
 ### Screenshots
 
