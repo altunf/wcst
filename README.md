@@ -2,10 +2,11 @@
 
 ## TR - Wisconsin Kart Eşleştirme Testi (WKET)
 
-- Bu web uygulaması nöropsikolojik bir test olan WCST'nin bir benzeridir.
+- Bu web uygulaması, nöropsikolojik bir test olan ve bilişsel esnekliği ve problem çözme becerilerini değerlendirmek için kullanılan Wisconsin Kart Sıralama Testi'nin (WKET) bir benzerini simüle etmektedir. 
 
- 
- - WCST'nin telif hakkı, Psychological Assessment Resources, Inc. (PAR) tarafından korunmaktadır. 
+- Kullanıcılar sanal kartları değişen kurallara göre sıralayabilir ve performansları hakkında geri bildirim alabilirler. 
+
+- Bu çalışmada kullanılan ölçüm kriterleri WCST'nin orjinal kriterleri ile aynı değildir. WCST'nin telif hakkı, Psychological Assessment Resources, Inc. (PAR) tarafından korunmaktadır.
 
 ### Screenshots
 
