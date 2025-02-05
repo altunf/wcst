@@ -11,7 +11,7 @@ const operationalMode = (
 );
 
 function App() {
-  return <Maintenance />;
+  return operationalMode;
 }
 
 export default App;
